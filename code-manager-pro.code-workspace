@@ -1,0 +1,77 @@
+{
+  "folders": [
+    { "name": "🚀 Code Manager Pro (Root)", "path": "." },
+    { "name": "⚙️ Backend (Node.js)", "path": "./backend" },
+    { "name": "🎨 Frontend (React)", "path": "./frontend" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "files.exclude": { "**/node_modules": true, "**/.git": true },
+    "emmet.includeLanguages": { "javascript": "javascriptreact" },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.cwd": "${workspaceFolder}"
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "dbaeumer.vscode-eslint",
+      "ms-vscode.vscode-typescript-next",
+      "mongodb.mongodb-vscode",
+      "humao.rest-client"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Backend: Node.js",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "nodemon",
+        "program": "${workspaceFolder}/backend/server.js",
+        "env": { "NODE_ENV": "development" },
+        "console": "integratedTerminal",
+        "restart": true
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Install All Dependencies",
+        "type": "shell",
+        "command": "npm run install:all",
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Start Backend",
+        "type": "shell",
+        "command": "npm run dev",
+        "options": { "cwd": "${workspaceFolder}/backend" },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Start Frontend",
+        "type": "shell",
+        "command": "npm run dev",
+        "options": { "cwd": "${workspaceFolder}/frontend" },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Seed Database",
+        "type": "shell",
+        "command": "node utils/seed.js",
+        "options": { "cwd": "${workspaceFolder}/backend" },
+        "group": "test",
+        "problemMatcher": []
+      }
+    ]
+  }
+}
