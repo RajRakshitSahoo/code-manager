@@ -1,5 +1,5 @@
 # 🚀 Code Manager Pro
-fgdh fh rhfh gh fghfhf 
+
 > **Advanced Developer Productivity & Code Organization Platform**
 > Built with React, Node.js, Express, MongoDB — Portfolio-ready, production-grade.
 
