@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('cmp_theme', theme);
+    localStorage.setItem('cmp_theme', theme); 
   }, [theme]);
 
   const cycleTheme = () => {
