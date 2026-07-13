@@ -1,5 +1,5 @@
 { 
-  "folders": [ 
+  "folders": [
     { "name": "🚀 Code Manager Pro (Root)", "path": "." },
     { "name": "⚙️ Backend (Node.js)", "path": "./backend" },
     { "name": "🎨 Frontend (React)", "path": "./frontend" }
