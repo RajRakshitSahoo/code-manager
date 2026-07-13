@@ -8,7 +8,7 @@ const projectSchema = new mongoose.Schema({
   },
   name: {
     type: String,
-    required: [true, 'Project name is required'],
+    required: [true, 'Project name is required'], 
     trim: true,
     maxlength: [100, 'Name cannot exceed 100 characters']
   },
