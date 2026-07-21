@@ -16,7 +16,7 @@ const activitySchema = new mongoose.Schema({
       'data_exported', 'data_imported',
       'user_login', 'user_registered'
     ]
-  },
+  }, 
   resource: {
     type: String,
     enum: ['project', 'snippet', 'note', 'user'],
